@@ -1,3 +1,6 @@
+import 'package:daily_workout/screens/diet_screen.dart';
+import 'package:daily_workout/screens/kegel_screen.dart';
+import 'package:daily_workout/screens/yoga_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:daily_workout/constants.dart';
@@ -82,12 +85,26 @@ class HomeScreen extends StatelessWidget {
                         CategoryCard(
                           title: "Diet Recommendation",
                           svgSrc: "assets/icons/Hamburger.svg",
-                          press: () {},
+                          press: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) {
+                                return DietScreen();
+                              }),
+                            );
+                          },
                         ),
                         CategoryCard(
                           title: "Kegel Exercises",
                           svgSrc: "assets/icons/Excrecises.svg",
-                          press: () {},
+                          press: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) {
+                                return KegelScreen();
+                              }),
+                            );
+                          },
                         ),
                         CategoryCard(
                           title: "Meditation",
@@ -104,7 +121,14 @@ class HomeScreen extends StatelessWidget {
                         CategoryCard(
                           title: "Yoga",
                           svgSrc: "assets/icons/yoga.svg",
-                          press: () {},
+                          press: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) {
+                                return YogaScreen();
+                              }),
+                            );
+                          },
                         ),
                       ],
                     ),
